@@ -7,9 +7,10 @@ metadata:
 spec:
   selector:
     app: my-app
-    version: blue  # Initial auf Blue Deployment zeigen
+    rollout: my-app-rollout  # Zusätzliches Label
+    version: blue              # Selektor für die Blue-Version
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
   type: LoadBalancer  # Oder NodePort/InCluster je nach Bedarf
