@@ -18,6 +18,7 @@ spec:
     metadata:
       labels:
         app: my-app
+        version: blue  # Dieses Label hinzufügen
     spec:
       containers:
       - name: my-app-container
